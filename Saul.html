@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Presentación — Saul</title>
+  <style>
+    :root{
+      --primary:#253b4a;
+      --secondary:#2f4a5d;
+      --card:#ffffff;
+      --bg:#f3f4f6;
+      --text:#111827;
+      --muted:#6b7280;
+      --shadow:0 10px 20px rgba(0,0,0,.08);
+      --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    .topbar{
+      background:var(--primary);
+      color:#fff;
+      padding:42px 20px;
+      position:relative;
+    }
+    .title{
+      text-align:center;
+      font-size:clamp(22px, 3.2vw, 36px);
+      font-weight:800;
+      margin:0;
+    }
+    .avatar{
+      position:absolute;
+      right:24px;
+      bottom:-24px;
+      width:64px;height:64px;
+      display:grid;place-items:center;
+      background:#3b82f6;
+      color:#fff;
+      font-weight:700;
+      border-radius:999px;
+      box-shadow:var(--shadow);
+    }
+
+    .nav{
+      background:var(--secondary);
+      color:#dbe3ea;
+    }
+    .nav-wrap{
+      max-width:1100px;margin:0 auto;
+      display:flex;gap:16px;align-items:center;
+      padding:12px 20px;
+      overflow:auto;
+    }
+    .nav a{
+      color:#dbe3ea;
+      text-decoration:none;
+      padding:8px 12px;
+      border-radius:10px;
+      white-space:nowrap;
+      transition:background .15s ease, color .15s ease;
+    }
+    .nav a:hover{background:rgba(255,255,255,.12); color:#fff;}
+    .nav a.active{
+      background:#1f3341;color:#fff;font-weight:600;
+    }
+
+    .container{max-width:1000px;margin:54px auto 80px;padding:0 20px;}
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px;
+    }
+    .card h2{margin:0 0 10px 0;font-size:22px;}
+    .divider{height:1px;background:#e5e7eb;margin:16px 0 20px;}
+    .lead{color:var(--muted);line-height:1.6;margin-bottom:8px;}
+    ul{margin:10px 0 0 22px;line-height:1.7;}
+
+    .img-fav{
+      margin:16px 0;
+      text-align:center;
+    }
+    .img-fav img{
+      max-width:100%;
+      border-radius:12px;
+      box-shadow:var(--shadow);
+    }
+
+    .actions{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap;}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      padding:10px 16px;border-radius:12px;border:1px solid transparent;
+      background:var(--primary);color:#fff;font-weight:600;
+      text-decoration:none;box-shadow:var(--shadow);
+      transition:transform .05s ease, opacity .15s ease, background .15s ease;
+    }
+    .btn:hover{opacity:.95}
+    .btn:active{transform:translateY(1px)}
+    .btn.outline{background:#fff;color:var(--primary);border-color:#c7d2da;}
+
+    footer{
+      background:var(--primary);color:#dbe3ea;
+      padding:16px 20px;text-align:center;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <h1 class="title">Equipo No. [Número]</h1>
+    <div class="avatar">Sa</div>
+  </header>
+
+  <nav class="nav">
+    <div class="nav-wrap">
+      <a href="index.html">Inicio</a>
+      <a href="erick.html">Erick</a>
+      <a class="active" href="#">Saul</a>
+      <a href="pablo.html">Pablo</a>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="card">
+      <h2>— Presentación de Saul</h2>
+      <p class="lead">
+        ¡Hola! Soy <strong>Saul</strong>. Me encantan los videojuegos y aquí te cuento un poco de mis gustos.
+      </p>
+      <div class="divider"></div>
+
+      <h3 style="margin:0 0 6px 0;">Videojuego favorito</h3>
+      <p class="lead">
+        Mi juego favorito es <strong>The Legend of Zelda: Ocarina of Time</strong>; me fascinan su historia, la exploración y su música inolvidable.
+      </p>
+      <div class="img-fav">
+        <img src="https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_3ds_25/SI_3DS_TheLegendofZeldaOcarinaofTime3D_image1600w.jpg" alt="The Legend of Zelda Ocarina of Time">
+      </div>
+
+      <h3 style="margin:16px 0 6px 0;">Géneros que me gustan</h3>
+      <ul>
+        <li><strong>Juegos de ritmo:</strong> disfruto seguir el beat y mejorar puntuaciones.</li>
+        <li><strong>Shooters:</strong> me gustan por su estrategia, reflejos y trabajo en equipo.</li>
+      </ul>
+
+      <div class="actions">
+        <a class="btn" href="index.html">⬅ Regresar al inicio</a>
+        <a class="btn outline" href="#top">Subir</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Juegos Samir — Todos los derechos reservados
+  </footer>
+</body>
+</html>

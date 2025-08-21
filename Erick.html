@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Erick - Juegos Samir</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Encabezado */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: #34495e;
+            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            float: left;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #3498db;
+        }
+
+        /* Contenido principal */
+        .main-content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .image-container {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* Pie de página */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: 40px;
+        }
+
+        /* Botón flotante de regreso */
+        .btn-regresar {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(45deg, #00d2ff, #ff416c);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            z-index: 999;
+            font-size: 1em;
+        }
+
+        .btn-regresar:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">JS</div>
+        <h1>Equipo No. [Número]</h1>
+    </header>
+
+    <!-- Navegación -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="erick.html">Erick</a></li>
+            <li><a href="saul.html">Saul</a></li>
+            <li><a href="pablo.html">Pablo</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="main-content">
+        <h2>👤 Erick</h2>
+        <p>Hola, soy Erick, uno de los integrantes del equipo "Juegos Samir". Me encanta jugar videojuegos, especialmente los que me ponen a prueba tanto mental como físicamente.</p>
+
+        <h2>🎮 Juego Favorito: Grand Theft Auto V</h2>
+        <p>El juego que más me ha impactado es <strong>Grand Theft Auto V</strong>. Me encanta su mundo abierto, la libertad de explorar, y la historia que combina drama, humor y acción. Además, disfruto mucho del modo multijugador <em>Online</em>, donde puedo competir, hacer misiones o simplemente pasar tiempo con amigos.</p>
+
+        <div class="image-container">
+            <img src="https://fotografias-neox.atresmedia.com/clipping/cmsimages02/2018/07/20/4BDE9086-F557-4828-929B-B2D617606653/58.jpg?crop=2257,1280,x9,y0&width=1000&height=567&optimize=high&format=webply" />
+        </div>
+
+        <h2>🎧 Gustos por Juegos de Ritmo y Acción Multijugador</h2>
+        <p>También me fascinan los juegos de <strong>ritmo</strong>, como <em>Guitar Hero</em> o <em>Dance Dance Revolution</em>, porque combinan música y habilidad. Además, amo los juegos de <strong>acción multijugador</strong>, como <em>Call of Duty</em>, <em>Fortnite</em> o <em>Apex Legends</em>, donde cada partida es diferente y siempre hay estrategia.</p>
+
+        <p>Me gusta mezclar lo emocionante con lo desafiante, y eso es lo que busco en cada juego que pruebo.</p>
+    </div>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Juegos Samir - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Botón flotante para regresar al index.html -->
+    <a href="index.html" class="btn-regresar">
+        ← Regresar al Inicio
+    </a>
+
+</body>
+</html>
