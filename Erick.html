@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>🎮 ¡JUEGOS CHIDOS!</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') no-repeat center;
+            background-size: cover;
+            color: #fff;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0%, 100% 85%, 0 100%);
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        header * {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+
+        nav {
+            background: #ff416c;
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: 0.3s;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        nav a:hover {
+            background: #fff;
+            color: #ff416c;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        h2 {
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            color: #00d2ff;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .games {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .game-card {
+            background: #1a2930;
+            border-radius: 12px;
+            overflow: hidden;
+            width: 280px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            transition: transform 0.3s;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .game-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .game-info {
+            padding: 15px;
+        }
+
+        .game-info h3 {
+            color: #ff416c;
+            margin-bottom: 10px;
+        }
+
+        .news {
+            background: #000000;
+            padding: 20px;
+            border-left: 5px solid #00d2ff;
+            margin: 20px 0;
+        }
+
+        .news h3 {
+            color: #00d2ff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #111;
+            margin-top: 40px;
+        }
+
+        /* Botón flotante para regresar al index.html */
+        .btn-regresar {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(45deg, #00d2ff, #ff416c);
+            color: white;
+            padding: 14px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            z-index: 999;
+            font-size: 1.1em;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .btn-regresar:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado épico -->
+    <header>
+        <h1>🎮 ¡JUEGOS CHIDOS!</h1>
+        <p class="subtitle">Donde los pixels cobran vida y los noobs se hacen leyenda</p>
+    </header>
+
+    <!-- Menú navegación -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#historia">Historia</a></li>
+            <li><a href="#juegos">Juegos</a></li>
+            <li><a href="#noticias">Noticias</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección: Inicio -->
+    <section id="inicio">
+        <h2>¿Por qué los videojuegos son la onda?</h2>
+        <p>Porque no solo matas tiempo, ¡matas zombies, dragones, jefes malvados y hasta tus récords personales! Los videojuegos son arte, estrategia, adrenalina y diversión en estado puro.</p>
+        <p>Desde el <strong>Pong</strong> hasta el <strong>Elden Ring</strong>, hemos evolucionado como civilización... gracias a los controles.</p>
+        <a href="#juegos" class="btn" style="display:inline-block; margin-top:20px; padding:12px 25px; background:#00d2ff; color:#000; text-decoration:none; border-radius:30px; font-weight:bold;">Ver Juegos Épicos</a>
+    </section>
+
+    <!-- Sección: Historia -->
+    <section id="historia">
+        <h2>📜 La Historia de los Videojuegos</h2>
+        <p>Todo empezó en los años 70 con juegos simples como <strong>Pong</strong>, un tenis de mesa con dos rectángulos y una pelota. Luego llegó <strong>Space Invaders</strong>, <strong>Pac-Man</strong> y el mítico <strong>Super Mario Bros.</strong> en los 80.</p>
+        <p>Los 90 fueron la era de oro: <strong>Street Fighter II</strong>, <strong>GoldenEye 007</strong>, <strong>Final Fantasy VII</strong>. ¡Y no olvidemos a los primeros juegos 3D como <strong>Doom</strong> y <strong>Super Mario 64</strong>!</p>
+        <p>Hoy, los juegos son mundos completos: online, realistas, inmersivos. ¡Y con gráficos que hacen llorar a tu tarjeta de video!</p>
+    </section>
+
+    <!-- Sección: Juegos Populares -->
+    <section id="juegos">
+        <h2>🔥 Juegos Bien Chidos</h2>
+        <div class="games">
+            <!-- Juego 1 -->
+            <div class="game-card">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="The Legend of Zelda">
+                <div class="game-info">
+                    <h3>The Legend of Zelda: Breath of the Wild</h3>
+                    <p>Un mundo abierto, misterios antiguos y un Link que cocina antes de salvar Hyrule. ¿Qué más se puede pedir?</p>
+                </div>
+            </div>
+
+            <!-- Juego 2 -->
+            <div class="game-card">
+                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Minecraft">
+                <div class="game-info">
+                    <h3>Minecraft</h3>
+                    <p>Cuando el mundo es de bloques, tú eres el arquitecto, el guerrero, el chef... y el que se cae en lava por despistado.</p>
+                </div>
+            </div>
+
+            <!-- Juego 3 -->
+            <div class="game-card">
+                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fortnite">
+                <div class="game-info">
+                    <h3>Fortnite</h3>
+                    <p>Construye, dispara, baila. Todo en 100 jugadores, un bus mágico y un cubo de Tesseract. ¡La batalla real más loca!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Noticias -->
+    <section id="noticias">
+        <h2>📰 Últimas Noticias</h2>
+        <div class="news">
+            <h3>🎮 Nuevo God of War en desarrollo</h3>
+            <p>¡Kratos y Atreus regresan! Santa Monica Studio anuncia una nueva aventura en el universo nórdico... y esta vez, con más barba.</p>
+        </div>
+        <div class="news">
+            <h3>🚀 Xbox lanza consola cuántica (mentira, pero casi)</h3>
+            <p>La nueva Xbox Series X+ promete el doble de velocidad. Ahora puedes cargar juegos mientras parpadeas. Casi.</p>
+        </div>
+    </section>
+
+    <!-- Sección: Contacto -->
+    <section id="contacto">
+        <h2>📬 ¿Quieres ser parte de esta locura?</h2>
+        <p>Envíanos tu mejor screenshot, tu récord en Mario Kart o simplemente dile a tu mamá que estás "estudiando programación de juegos".</p>
+        <a href="mailto:contacto@juegoschidos.com" class="btn" style="display:inline-block; margin-top:20px; padding:12px 25px; background:#00d2ff; color:#000; text-decoration:none; border-radius:30px; font-weight:bold;">Enviar Correo</a>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2025 Juegos Chidos – Hecho con amor, café y muchas horas sin dormir.</p>
+        <p>🎮 "El game over no existe si sigues intentando."</p>
+    </footer>
+
+    <!-- Botón flotante para regresar al index.html -->
+    <a href="index.html" class="btn-regresar">
+        ← Regresar al Inicio
+    </a>
+
+</body>
+</html>
